@@ -1,202 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-:root {
-  --cr1: rgb(221, 81, 0);
-  --cr2: rgb(221, 0, 147);
-  --cr3: rgb(18, 0, 34);
-  --bordeg1: linear-gradient(0deg, #ffffff, #929292);
-  --bordeg2: linear-gradient(0deg, #000000, #252525);
-}
-
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth !important;
 }
 
-html, body {
-  height: 100%;
-  overflow: hidden;
+:root {
+  /* night */
+  --bgn50: #2c00728e;
+  --bgn: #0d0025;
+  --bgndeg: linear-gradient(0deg, #1d1831 0%, #2b0d5f 100%);
+  --bgc: #3c00ff;
+  --bgn2: #3c00ff;
+  --tb: #ffffff;
+  --tc: #df0091;
+  --tg2: #8e8e8e;
+  
+  /* day */
+  --tg: #555555;
+  --bgb: #fdf3dd;
+  --bgb2: #c3c3c3;
+  --bgb50: #fdf3dd88;
+  --tm: #7b00ff;
+  --tn: #212121;
+  --tc2: #df8d00;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
+  background: var(--bgndeg);
+  color: var(--tb);
   display: flex;
-  color: white;
-  text-justify: auto;
+  transition: background-color 1s ease-in-out;
 }
 
-.profile h1 {
-  font-size: 2rem;
-  color: var(--cr2);
-}
-
+/* Main Container */
 .container {
-  transition: background-color 1s ease-in-out !important;
   display: flex;
   width: 100%;
   height: 100vh;
-  position: relative; /* Permite que el contenido esté encima del video */
 }
 
+/* Sidebar */
 .sidebar {
-  width: 20rem; /* Use max-width to help with transitions */
-  overflow: hidden; /* Prevents content overflow */
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 4rem;
+  border-right: 1px solid var(--tb);
+  padding: 1rem 0;
   position: fixed;
-  height: 100%;
-  border: 1px solid rgba(102, 102, 102, 0.267);
-  background-color: #ff007788;
-  transition: background-color 0.5s ease-in-out, width 0.5s ease-in-out !important;
+  height: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-top-right-radius: 100rem;
+  border-bottom-right-radius: 100rem;
+  justify-content: center;
+  top: 20%;
 }
 
-@media (max-width: 900px) {
-  .sidebar {
-    width: 10rem;
-    transition: width 0.5s ease-in-out;
-  }
-  
-  .profile img {
-    width: 93%;
-    height: auto;
-    transition: width 0.3s ease-in-out;
-  }
-
-  .nav a {
-    padding: 0.5rem 0;
-    transition: padding 1s ease-in-out;
-    margin: 0.5rem 0;
-  }
-}
-
-.profile {
-  text-align: center;
-}
-
-.profile-img {
-  border-radius: 50%;
-  width: 15rem;
-  height: auto;
-  margin-bottom: 1rem;
-  border: 2px solid rgb(255, 255, 255);
-  transition: width 2s ease-in-out;
-}
-
+/* Navigation Icons */
 .nav {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 100%;
+  justify-items: center;
+  text-align: center;
+  align-items: center;
 }
 
 .nav a {
-  transition: padding 0.5s ease-in-out !important;
-  padding: 0.5rem 0.5rem;
-  margin: 0.5rem 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  font-size: 1.5rem;
+  color: var(--tg2);
+  margin: 1rem;
   text-decoration: none;
-  color: white;
+  transition: transform 0.3s ease-in-out, color 0.2s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect with scale and staggered transitions */
+.nav a:hover, .nav a.active {
+  transform: scale(1.6);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+
+
+.daynight {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-right: 0.5rem;
+  padding-bottom: 0.4rem;
+  color: var(--tc2);
+  background-color: var(--bgn);
   text-align: center;
-  width: 100%;
-  border-radius: 5px;
-  transition: background 0.3s;
-  font-size: 0.9rem;
 }
 
-.nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: var(--cr1);
-}
 
+/* Main Content */
 .main-content {
-  margin-left: 20%;
+  margin-left: 5rem;
   padding: 2rem;
-  width: 80%;
+  width: calc(100% - 5rem);
   overflow-y: auto;
 }
 
 section {
-  padding: 2rem 0;
+  height: 80vh;
 }
 
-h1 {
-  font-size: 2rem;
-  background-color: #3e0a91;
-  padding: 0.1rem 0.5rem;
-  width: max-content;
-  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+/* Mode Styles */
+body.day-mode {
+  background: var(--bgb2);
+  color: var(--tg);
 }
 
-body.light-mode .container {
-  background-color: rgba(255, 255, 255, 0.425);
-  transition: background-color 0.5s ease-in-out;
+body.day-mode .sidebar {
+  background-color: var(--bgb);
+  border-right: 1px solid var(--tg);
 }
 
-body.light-mode h1 {
-  color: rgb(206, 0, 103);
-  background-color: #ff942f;
-  padding: 0.1rem 0.5rem;
-  width: max-content;
-  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+body.day-mode .nav a:hover {
+  color: var(--tb);
 }
 
-body.light-mode .sidebar {
-  background-color: #ff910080;
-  transition: background-color 0.5s ease-in-out;
+body.day-mode .nav a.active {
+  color: var(--tc2);
 }
 
-body.light-mode p {
-  color: var(--cr3);
+body.day-mode .nav a:hover {
+  color: var(--tm);
 }
 
-h2 {
-  font-size: 2rem;
+body.day-mode .daynight {
+  background-color: var(--bgb);
+  color: var(--tc2);
 }
 
-p {
-  font-size: 1.2rem;
+body.day-mode .daynight:hover {
+  background-color: var(--bgn);
+  scale: 1.2;
+  transition: scale 0.2s ease;
 }
 
-strong {
-  color: var(--cr2);
+body.night-mode {
+  background: var(--bgndeg);
+  color: var(--tb);
 }
 
-body.light-mode {
-  background: var(--bordeg1);
-  color: black;
+body.night-mode .sidebar {
+  background-color: var(--bgn);
+  border-right: 1px solid var(--tb);
 }
 
-#toggleTheme {
-  margin-top: 1rem;
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.2);
+body.night-mode .daynight {
+  background-color: var(--bgn);
+  color: var(--tc2);
 }
 
-#toggleTheme:hover {
-  background: rgba(61, 61, 61, 0.685);
+body.night-mode .daynight:hover {
+  background-color: var(--tc2);
+  scale: 1.2;
+  transition: scale 0.2s ease;
 }
 
-a {
-  border: 1px solid rgba(37, 37, 37, 0.527);
+body.night-mode .nav a.active {
+  color: var(--tb);
 }
 
-.video-background {
-  position: fixed; /* Fijo para ocupar toda la pantalla */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que el video cubra toda la pantalla */
-  z-index: -1; /* Coloca el video detrás del contenido */
+body.night-mode .nav a:hover {
+  color: var(--tc2);
 }
