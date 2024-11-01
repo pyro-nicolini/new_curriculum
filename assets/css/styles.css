@@ -20,14 +20,10 @@
   --tg: #555555;
   --bgb: #fdf3dd;
   --bgb2: #c3c3c3;
-  --bgb50: #fdf3dd88;
+  --bgb50: #ffecc488;
   --tm: #7b00ff;
   --tn: #212121;
   --tc2: #df8d00;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -35,14 +31,7 @@ body {
   background: var(--bgndeg);
   color: var(--tb);
   display: flex;
-  transition: background-color 1s ease-in-out;
-}
-
-/* Main Container */
-.container {
-  display: flex;
-  width: 100%;
-  height: 100vh;
+  transition: background-color 0.5s ease-in-out, color .3s ease-in-out;
 }
 
 /* Sidebar */
@@ -50,17 +39,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 4rem;
+  width: 3.7rem;
   border-right: 1px solid var(--tb);
   padding: 1rem 0;
   position: fixed;
   height: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  border-top-right-radius: 100rem;
-  border-bottom-right-radius: 100rem;
+  border-top-right-radius: 80rem;
+  border-bottom-right-radius: 80rem;
   justify-content: center;
   top: 20%;
+  transition: width 0.1s ease;
+}
+
+.sidebar:hover {
+  width: 4.2rem;
+  transition: width .3s ease-in-out;
 }
 
 /* Navigation Icons */
@@ -88,8 +83,6 @@ body {
   transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
 }
 
-
-
 .daynight {
   margin-top: 1rem;
   margin-left: 0.5rem;
@@ -102,29 +95,18 @@ body {
   color: var(--tc2);
   background-color: var(--bgn);
   text-align: center;
+  transition: scale 0.2s ease-in-out;
 }
 
-
-/* Main Content */
-.main-content {
-  margin-left: 5rem;
-  padding: 2rem;
-  width: calc(100% - 5rem);
-  overflow-y: auto;
-}
-
-section {
-  height: 80vh;
-}
 
 /* Mode Styles */
 body.day-mode {
-  background: var(--bgb2);
+  background: var(--bgb);
   color: var(--tg);
 }
 
 body.day-mode .sidebar {
-  background-color: var(--bgb);
+  background-color: var(--bgb50);
   border-right: 1px solid var(--tg);
 }
 
@@ -157,7 +139,7 @@ body.night-mode {
 }
 
 body.night-mode .sidebar {
-  background-color: var(--bgn);
+  background-color: var(--bgn50);
   border-right: 1px solid var(--tb);
 }
 
@@ -178,4 +160,37 @@ body.night-mode .nav a.active {
 
 body.night-mode .nav a:hover {
   color: var(--tc2);
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 1.5rem;
+  padding: 0 1rem;
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 4rem;
 }

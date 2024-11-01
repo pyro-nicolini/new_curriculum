@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.sidebar');
   const navLinks = document.querySelectorAll('.nav a');
   const sections = document.querySelectorAll('section');
+  const toggleButton = document.querySelector('.daynight');
 
   // Función para actualizar el estado de la barra lateral
   function updateSidebarActiveState() {
@@ -62,19 +63,13 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(section => {
       observer.observe(section);
   });
-});
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Comprobar si el body tiene la clase 'night-mode' al cargar
+  // Modo nocturno por defecto
   if (!document.body.classList.contains('night-mode')) {
     document.body.classList.add('night-mode'); // Iniciar en modo oscuro
   }
 
-  // Obtener el botón para cambiar el modo
-  const toggleButton = document.querySelector('.daynight');
-
-  // Agregar un evento de clic al botón
+  // Cambiar entre modo diurno y nocturno
   toggleButton.addEventListener('click', function() {
     // Alternar entre las clases 'day-mode' y 'night-mode'
     document.body.classList.toggle('night-mode');
