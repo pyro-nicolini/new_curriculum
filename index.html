@@ -1,343 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub-Style CV</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
-    <!--menu encambezado-->
-    <header>
-        <div class="logo">
-            <a href="#">PY NICOLINI</a>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li> <a href="#perfil">INICIO</a></li>
-                <li> <a href="https://pyro-nicolini.github.io/certificates/">CERTIFICADOS</a></li>
-                <li> <a href="#skills">SKILLS</a></li>
-                <li> <a href="#curriculum">CURRICULUM</a></li>
-                <li> <a href="#portfolio">PORTAFOLIO</a></li>
-                <li> <a href="#contacto">CONTACTO</a></li>
-            </ul>
-        </nav>
-        <div class="menu2">
-                <i class="fa-solid fa-bars"></i>
-        </div>
-    </header>
-    <!--sección inicio-->
-    <section id="perfil" class="perfil">
-        <div class="contPerfil">
-            <div class="animPerfil">
-                <img src="./assets/img/piero.png" alt="">
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile">
+                <img src="/assets/img/piero.png" alt="Profile Picture" class="profile-img">
+                <h1>Piero Nicolini</h1>
+                <p>Web Developer | Climbing Enthusiast</p>
             </div>
-            <h1>PIERO NICOLINI</h1>
-            <h3>FRONT-END Javascript</h3>
-            <div class="rrss">
-                <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://linkedin.com/in/piero-nicolini" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://github.com/pyro-nicolini"><i class="fa-brands fa-github"></i></a>
-            </div>
-        </div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <button id="toggleTheme" class="botonsun">🌙</button>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+<!-- Main Content -->
+<main class="main-content">
+    <section id="about">
+        <h1>About</h1>
+        <p>Brief introduction about yourself.</p>
     </section>
-        <!-- SECCION SKILLS -->
-    <section class="beta" id="skills">
-        <div class="content">
-            <h2>Skills</h2>
-            <div class="fila">
-                <!-- Technical Skill -->
-                <div class="col">
-                    <h3>Technical Skills</h3>
-                    <div class="skill">
-                        <span>Javascript</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>65%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>HTML & CSS</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>90%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Github</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>20%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Bootstrap</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>30%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Professional Skills -->
-                <div class="col">
-                    <h3>Professional Skills</h3>
-                    <div class="skill">
-                        <span>Comunicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Trabajo en Equipo</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Creatividad</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>80%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="skill">
-                        <span>Dedicación</span>
-                        <div class="barra-skill">
-                            <div class="progreso">
-                                <span>65%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="experience">
+        <h1>Experience</h1>
+        <p>Details of your professional experience.</p>
     </section>
-
-    <!-- SECCION SOBRE MI -->
-    <section id="sobremi" class="alfa">
-        <div class="content">
-            <div class="aboutme">
-                <h2>Sobre mí</h2>
-                    <p>Hola, me llamo <strong>Piero Nicolini</strong> tengo 34 años</p>
-                    <p><span>Desarrollador FRONT-END en proceso</span></p>
-                    <p>Amor por aprender | Emprendedor | Trabajo Colaborativo | diseñador industrial de primera profesión.</p>
-            </div>
-            </div>
-            <div class="fila">
-                <!-- datos personales -->
-                <div class="col">
-                    <h3>Datos Personales</h3>
-                    <ul>
-                        <li>
-                            <strong>Licencia</strong>
-                            <p>Clase B</p>
-                            <strong>birthday</strong>
-                            <p>12/09/1989</p>
-                            <strong>Phone</strong>
-                            <p>+56977116315</p>
-                            <strong>Email</strong>
-                            <p>   naturalnen@gmail.com</p>
-                        </li>
-                </div>
-
-
-                <!-- intereses -->
-                <div class="col">
-                    <h3>Intereses</h3>
-                    <div class="contenedor-intereses">
-                        <div class="interes">
-                            <i class="fa-solid fa-mountain"></i> <!-- Icono para ESCALAR -->
-                            <span>ESCALAR</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-code"></i> <!-- Icono para PROGRAMAR -->
-                            <span>PROGRAMAR</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-camera"></i> <!-- Icono para FOTOGRAFÍA -->
-                            <span>FOTOGRAFÍA</span>
-                        </div>
-                        <div class="interes">
-                            <i class="fa-solid fa-paintbrush"></i> <!-- Icono para DISEÑAR -->
-                            <span>DISEÑAR</span>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-
-
-            <!--BOTÓN PARA DESCARGAR CV-->
-            <button>
-                Descargar CV <a href="./assets/pdf/Cv_piero_nicolini.pdf" target="_blank" download="Cv_piero_nicolini"></a>
-                <span class="overlay"></span>
-            </button>
-        </div>
+    <section id="education">
+        <h1>Education</h1>
+        <p>Your educational background.</p>
     </section>
-<!-- SECCION CURRICULUM -->
-<section id="curriculum" class="curriculum">
-    <div class="contenido-seccion">
-        <h2>Curriculum</h2>
-        <div class="fila">
-            <div class="col izquierda">
-                <h3>Educación</h3>
-                <div class="item izq">
-                    <h4>Desarrollador Front End</h4>
-                    <span class="casa">Desafio Latam | Academia HolaMundo | Udemy</span>
-                    <span class="fecha">2024</span>
-                    <p>Desarrollo de sitios web y aplicaciones con enfoque en la experiencia del usuario, utilizando HTML, CSS, y JavaScript para clientes de distintas industrias.</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
-                    </div>
-                </div>
-                <div class="item izq">
-                    <h4>Diseño Industrial</h4>
-                    <span class="casa">DuocUC</span>
-                    <span class="fecha">2009 - 2013</span>
-                    <p>Formación en diseño industrial, con un enfoque en la creación de productos, manejo de materiales y técnicas de manufactura, además de habilidades en modelado 3D y prototipado.</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
-                    </div>
-                </div>
-                <div class="item izq">
-                    <h4>Enseñanza Media Completa</h4>
-                    <span class="casa">Colegio Leonardo Da Vinci</span>
-                    <span class="fecha">2008</span>
-                    <p>Obtención de la licencia de enseñanza media completa, fortaleciendo habilidades artísticas y enfoque de trabajo colaborativo.</p>
-                    <div class="conectori">
-                        <div class="circuloi"></div>
-                    </div>
-                </div>
-            </div>
+    <section id="skills">
+        <h1>Skills</h1>
+        <p>List of skills.</p>
+    </section>
+    <section id="projects">
+        <h1>Projects</h1>
+        <p>Projects you have worked on.</p>
+    </section>
+</main>
 
-            <div class="col derecha">
-                <h3>Experiencia de trabajo</h3>
-                <div class="item der">
-                    <h4>Emprendedor en Escalandia</h4>
-                    <span class="casa">Escalandia</span>
-                    <span class="fecha">2018 - Actualidad</span>
-                    <p>Gestión de una empresa de muros de escalada y equipos para eventos, incluyendo la planificación de eventos, atención al cliente y manejo de ventas y cotizaciones personalizadas.</p>
-                    <div class="conectord">
-                        <div class="circulod"></div>
-                    </div>
-                </div>
-                <div class="item der">
-                    <h4>Diseñador Industrial</h4>
-                    <span class="casa">Viña Piernas Largas</span>
-                    <span class="fecha">2020 - 2022</span>
-                    <p>Desarrollo de conceptos, productos y prototipos para el departamento de Marketing de la viña. Desarrollo de modelos 3d, renders y juegos de mesa.</p>
-                    <div class="conectord">
-                        <div class="circulod"></div>
-                    </div>
-                </div>
-                <div class="item der">
-                    <h4>Desarrollador Web Freelance</h4>
-                    <span class="casa">Desafio Latam</span>
-                    <span class="fecha">2023 - Actualidad</span>
-                    <p>Desarrollo de sitios web y aplicaciones con enfoque en la experiencia del usuario, utilizando HTML, CSS, y JavaScript para clientes de distintas industrias.</p>
-                    <div class="conectord">
-                        <div class="circulod"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </main>
     </div>
-</section>
-
-
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="beta">
-        <div class="content">
-            <h2>PORTAFOLIO</h2>
-            <div class="galeria">
-                <div class="proyecto">
-                    <img src="./assets/images/cv_clase_01.png" alt="cv primera clase">
-                    <div class="overlay">
-                        <h3>CV PRIMERA CLASE</h3>
-                        <p>CV</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="./assets/images/galeria_de_michis.png" alt="galeria interactiva css">
-                    <div class="overlay">
-                        <h3>CREATIVO</h3>
-                        <p>Galeria interactiva michis</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="./assets/images/landing_page_clase_02.png" alt="Landing page clase 2">
-                    <div class="overlay">
-                        <h3>CSS LANDING PAGE</h3>
-                        <p>Proyecto landing</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="./assets/images/Iguana_page_clase_03.png" alt="Iguana page">
-                    <div class="overlay">
-                        <h3>FLEXBOX</h3>
-                        <p>Iguana page</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="./assets/images/landing_page_clase_02.png" alt="Landing page clase 2">
-                    <div class="overlay">
-                        <h3>CSS LANDING PAGE</h3>
-                        <p>Proyecto landing</p>
-                    </div>
-                </div>
-                <div class="proyecto">
-                    <img src="./assets/images/Iguana_page_clase_03.png" alt="Iguana page">
-                    <div class="overlay">
-                        <h3>FLEXBOX</h3>
-                        <p>Iguana page</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SECCION CONTACTO -->
-    <section id="contacto" class="alfa">
-        <h2>CONTACTO</h2>
-        <div class="contacto2">
-            <div class="info">
-                        <li>
-                            <p>
-                                <i class="fa-solid fa-location-dot"></i>
-                                Viña del mar, Chile
-                            </p>
-                            <p>
-                                <i class="fa-solid fa-mobile-screen"></i>
-                                +569 9977116315
-                            </p>
-                            <p>
-                                <i class="fa-solid fa-envelope"></i>
-                                naturalnen@gmail.com
-                            </p>
-                        </li>
-            </div>
-        </div>
-    </section>
-    <!-- footer -->
-    <footer>
-        <a href="#perfil" class="arriba">
-            <i class="fa-solid fa-angles-up"></i>
-        </a>
-        <div class="rrss">
-            <a href="https://x.com"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://linkedin.com/in/piero-nicolini" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/pyro-nicolini"><i class="fa-brands fa-github"></i></a>
-        </div>
-    </footer>
-    <script src="assets/js/script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
