@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.sidebar');
   const navLinks = document.querySelectorAll('.nav a');
   const sections = document.querySelectorAll('section');
-  const toggleButton = document.querySelector('.daynight');
+  const toggleButton = document.querySelector('.modo');
 
   // Función para actualizar el estado de la barra lateral
   function updateSidebarActiveState() {

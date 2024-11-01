@@ -36,14 +36,13 @@ body {
 
 /* Sidebar */
 .sidebar {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 3.7rem;
+  width: 4rem;
   border-right: 1px solid var(--tb);
   padding: 1rem 0;
   position: fixed;
-  height: 60vh;
+  height: 50vh;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border-top-right-radius: 80rem;
@@ -53,17 +52,13 @@ body {
   transition: width 0.1s ease;
 }
 
-.sidebar:hover {
-  width: 4.2rem;
-  transition: width .3s ease-in-out;
-}
-
 /* Navigation Icons */
 .nav {
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-items: center;
+  height: 100%;
+  justify-content: center;
   text-align: center;
   align-items: center;
 }
@@ -83,21 +78,21 @@ body {
   transition: transform 0.2s ease-in-out, color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
 }
 
-.daynight {
+.modo {
   margin-top: 1rem;
-  margin-left: 0.5rem;
   border-radius: 2rem;
   font-size: 1.6rem;
   width: 2.6rem;
   height: 2.6rem;
-  margin-right: 0.5rem;
-  padding-bottom: 0.4rem;
   color: var(--tc2);
   background-color: var(--bgn);
   text-align: center;
   transition: scale 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 /* Mode Styles */
 body.day-mode {
@@ -110,9 +105,6 @@ body.day-mode .sidebar {
   border-right: 1px solid var(--tg);
 }
 
-body.day-mode .nav a:hover {
-  color: var(--tb);
-}
 
 body.day-mode .nav a.active {
   color: var(--tc2);
@@ -122,13 +114,13 @@ body.day-mode .nav a:hover {
   color: var(--tm);
 }
 
-body.day-mode .daynight {
+body.day-mode .modo {
   background-color: var(--bgb);
   color: var(--tc2);
 }
 
-body.day-mode .daynight:hover {
-  background-color: var(--bgn);
+body.day-mode .modo:hover {
+  background-color: var(--tm);
   scale: 1.2;
   transition: scale 0.2s ease;
 }
@@ -143,12 +135,12 @@ body.night-mode .sidebar {
   border-right: 1px solid var(--tb);
 }
 
-body.night-mode .daynight {
-  background-color: var(--bgn);
+body.night-mode .modo {
+  background-color: var(--tm);
   color: var(--tc2);
 }
 
-body.night-mode .daynight:hover {
+body.night-mode .modo:hover {
   background-color: var(--tc2);
   scale: 1.2;
   transition: scale 0.2s ease;
@@ -181,10 +173,8 @@ section {
   text-align: center;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 40vh;
 }
-
-
 
 h1 {
   font-size: 4rem;
