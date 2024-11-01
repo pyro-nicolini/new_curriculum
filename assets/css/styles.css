@@ -42,12 +42,13 @@ body {
   border-right: 1px solid var(--tb);
   padding: 1rem 0;
   position: fixed;
-  height: 50vh;
+  height: 30rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border-top-right-radius: 80rem;
   border-bottom-right-radius: 80rem;
   justify-content: center;
+  flex-wrap: wrap;
   top: 20%;
   transition: width 0.1s ease;
 }
@@ -80,10 +81,13 @@ body {
 
 .modo {
   margin-top: 1rem;
+  margin-left: 0.5rem;
   border-radius: 2rem;
   font-size: 1.6rem;
   width: 2.6rem;
   height: 2.6rem;
+  margin-right: 0.5rem;
+  padding-bottom: 0.4rem;
   color: var(--tc2);
   background-color: var(--bgn);
   text-align: center;
@@ -126,7 +130,6 @@ body.day-mode .modo:hover {
 }
 
 body.night-mode {
-  background: var(--bgndeg);
   color: var(--tb);
 }
 
@@ -156,9 +159,7 @@ body.night-mode .nav a:hover {
 
 /* Main Container */
 .container {
-  display: flex;
-  width: 100%;
-  height: 100vh;
+  padding-left: 5.5rem;
 }
 
 /* Main Content */
@@ -168,12 +169,9 @@ body.night-mode .nav a:hover {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  margin: 10rem auto;
   align-items: center;
   justify-content: center;
-  height: 40vh;
 }
 
 h1 {
@@ -184,10 +182,15 @@ h2 {
   font-size: 2.8rem;
 }
 
+#perfil {
+  height: 100vh;
+  background-attachment: fixed;
+}
+
 
 @media (min-width: 400) {
-  body {
-  max-width: 400px;
+  h1, h2, h3, p {
+    padding-left: 5rem;
   }
-    
 }
+
