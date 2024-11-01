@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Reset */
 * {
   margin: 0;
@@ -15,6 +17,7 @@
   --tb: #ffffff;
   --tc: #df0091;
   --tg2: #8e8e8e;
+  --tc3: #178800;
   
   /* day */
   --tg: #555555;
@@ -27,6 +30,9 @@
 }
 
 body {
+  top:0;
+  left:0;
+  width: 100%;
   font-family: 'Poppins', sans-serif;
   background: var(--bgndeg);
   color: var(--tb);
@@ -159,19 +165,39 @@ body.night-mode .nav a:hover {
 
 /* Main Container */
 .container {
-  padding-left: 5.5rem;
+  padding-left: 3rem;
+  margin: auto;
+  text-align: justify;
 }
 
 /* Main Content */
 .main-content {
-  text-wrap: wrap;
+  max-width: 1200px;
   width: 100%;
 }
 
 section {
-  margin: 10rem auto;
   align-items: center;
   justify-content: center;
+  text-align: center;
+
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+strong {
+  color: var(--tc);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+span {
+  color: var(--tc3);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -185,12 +211,88 @@ h2 {
 #perfil {
   height: 100vh;
   background-attachment: fixed;
+  display: flex;
+  gap: 3rem;
+}
+
+.picture {
+  border-radius: 50%;
+  border: .3rem solid #ccc;
+}
+
+
+.academy {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  gap: 3rem;
+  margin-bottom: 30vh;
+}
+
+.academy img {
+  width: 10rem;
+  border-radius: 2rem;
+}
+
+#Achievements {
+  display: flex;
+  max-width: 30rem;
+  margin: 0 auto;
+  margin-bottom: 30vh;
+}
+
+.certs {
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  gap: 3rem;
+
+}
+
+#Achievements img {
+  width: 10rem;
+  border-radius: 2rem;
+}
+
+#tools {
+  max-width: 50rem;
+  margin: 0 auto;
+  margin-bottom: 10vh;
+}
+
+.info {
+  margin: 2rem;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  border-radius: 2rem;
+  gap: 5rem;
+}
+
+#tools button {
+  gap: 3rem;
+  width: 10rem;
+  height: 3rem;
+  border-radius: 3rem;
+}
+.pro {
+  display: flex;
+  gap: 3rem;
+  margin: 0 auto;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.pro img {
+  width: 10rem;
+  border-radius: 2rem;
 }
 
 
 @media (min-width: 400) {
   h1, h2, h3, p {
-    padding-left: 5rem;
   }
 }
 
