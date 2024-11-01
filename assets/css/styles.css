@@ -3,23 +3,26 @@
 :root {
   --cr1: rgb(221, 81, 0);
   --cr2: rgb(221, 0, 147);
+  --cr3: rgb(18, 0, 34);
   --bordeg1: linear-gradient(0deg, #ffffff, #929292);
   --bordeg2: linear-gradient(0deg, #000000, #252525);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
-html {
-  scroll-behavior: smooth;
+html, body {
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
   display: flex;
-  background: var(--bordeg2);
   color: white;
   text-justify: auto;
 }
@@ -29,15 +32,12 @@ body {
   color: var(--cr2);
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 .container {
+  transition: background-color 1s ease-in-out !important;
   display: flex;
   width: 100%;
   height: 100vh;
+  position: relative; /* Permite que el contenido esté encima del video */
 }
 
 .sidebar {
@@ -74,7 +74,6 @@ img {
     margin: 0.5rem 0;
   }
 }
-
 
 .profile {
   text-align: center;
@@ -130,14 +129,23 @@ section {
 
 h1 {
   font-size: 2rem;
+  background-color: #3e0a91;
+  padding: 0.1rem 0.5rem;
+  width: max-content;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+body.light-mode .container {
+  background-color: rgba(255, 255, 255, 0.425);
+  transition: background-color 0.5s ease-in-out;
 }
 
 body.light-mode h1 {
-  color: var(--h1-light);
-}
-
-body.light-mode h2 {
-  color: var(--cr2) !important;
+  color: rgb(206, 0, 103);
+  background-color: #ff942f;
+  padding: 0.1rem 0.5rem;
+  width: max-content;
+  transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
 }
 
 body.light-mode .sidebar {
@@ -145,9 +153,8 @@ body.light-mode .sidebar {
   transition: background-color 0.5s ease-in-out;
 }
 
-
 body.light-mode p {
-  color: var(--p-light);
+  color: var(--cr3);
 }
 
 h2 {
@@ -155,8 +162,11 @@ h2 {
 }
 
 p {
-  font-size: 1rem;
-  color: var(--p-dark);
+  font-size: 1.2rem;
+}
+
+strong {
+  color: var(--cr2);
 }
 
 body.light-mode {
@@ -179,4 +189,14 @@ body.light-mode {
 
 a {
   border: 1px solid rgba(37, 37, 37, 0.527);
+}
+
+.video-background {
+  position: fixed; /* Fijo para ocupar toda la pantalla */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra toda la pantalla */
+  z-index: -1; /* Coloca el video detrás del contenido */
 }
