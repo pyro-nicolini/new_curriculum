@@ -11,7 +11,7 @@
   /* night */
   --bgn50: #2c00728e;
   --bgn: #0d0025;
-  --bgndeg: linear-gradient(0deg, #1d1831 0%, #2b0d5f 100%);
+  --bgndeg: linear-gradient(0deg, #2b0077 0%, #200048 100%);
   --bgc: #3c00ff;
   --bgn2: #3c00ff;
   --tb: #ffffff;
@@ -150,7 +150,7 @@ body.night-mode .modo {
 }
 
 body.night-mode .modo:hover {
-  background-color: var(--tc2);
+  background-color: var(--tc);
   scale: 1.2;
   transition: scale 0.2s ease;
 }
@@ -178,6 +178,7 @@ body.night-mode .nav a:hover {
 .main-content {
   max-width: 1200px;
   width: 100%;
+  margin: 0 auto;
 }
 
 section {
@@ -217,11 +218,13 @@ h2 {
   background-attachment: fixed;
   display: flex;
   gap: 3rem;
+  
 }
 
 .picture {
   border-radius: 50%;
   border: .3rem solid #ccc;
+  min-width: 17rem;
 }
 
 
@@ -297,15 +300,24 @@ h2 {
 }
 
 
-@media (min-width: 400px) {
+@media (max-width: 700px) {
   body {
     overflow-x: hidden;
   }
 
   .container {
-    margin: auto;
-    width: 100%;
+    padding-left: 4rem;
   }
+
+  #perfil {
+    flex-direction: column;
+  }
+  
+  .picture {
+    max-width: 13rem;
+  }
+
+  
 }
 
 
