@@ -30,6 +30,43 @@
   --tc2: #df8d00;
 }
 
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+strong {
+  color: var(--tc);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+span {
+  color: var(--tc3);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+  padding-bottom: 3rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+p,li {
+  font-size: 1.4rem;
+  padding-bottom: 1.5rem;
+}
+
 body {
   top:0;
   left:0;
@@ -188,41 +225,11 @@ section {
   align-items: center;
   justify-content: center;
   text-align: center;
-
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
-
-strong {
-  color: var(--tc);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-span {
-  color: var(--tc3);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 2.8rem;
-}
-
-p {
-  font-size: 1.3rem;
-  padding-bottom: 1.5rem;
-}
 
 #perfil {
-  height: 100vh;
+  height: 70vh;
   background-attachment: fixed;
   display: flex;
   gap: 3rem;
@@ -261,23 +268,33 @@ p {
 }
 
 #Achievements {
-  display: flex;
-  max-width: 30rem;
-  margin: 0 auto;
+
 }
 
 .certs {
-  margin: 2rem;
+  width: 100%;
+  background-color: var(--bgn51);
+  margin-top: 3rem;
+  padding: 4rem 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 2rem;
   gap: 3rem;
-
+  backdrop-filter: blur(0.5rem);
+  text-align: center;
 }
 
-#Achievements img {
-  width: 10rem;
-  border-radius: 2rem;
+.certs img {
+  width: auto;
+  height: 10rem;
+  filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.7));
+  transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+.certs img:hover {
+  transform: scale(3);
+  position: relative;
+  z-index: 10;
 }
 
 #tools {
@@ -298,9 +315,9 @@ p {
 
 #tools i {
   width: 8rem;
-  height: 3rem;
+  height: 4rem;
   line-height: 5rem;
-  font-size: 5rem;
+  font-size: 7rem;
 }
 
 .pro {
