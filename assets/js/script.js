@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.querySelector('.sidebar');
-  const navLinks = document.querySelectorAll('.nav a');
+  const navLinks = document.querySelectorAll('.nave a');
   const sections = document.querySelectorAll('section');
   const toggleButton = document.querySelector('.modo');
 
@@ -83,5 +83,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
 
