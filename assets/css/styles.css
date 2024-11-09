@@ -102,6 +102,7 @@ body {
   background-size: cover;
   transition: background-position 0.3s ease; /* Smooth scroll effect */
   animation: slowMove 50s linear infinite; /* Aplica la animación */
+  z-index: 1;
 }
 
 @keyframes slowMove {
