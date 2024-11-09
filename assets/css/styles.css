@@ -56,7 +56,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   padding-bottom: 3rem;
 }
 
@@ -68,6 +68,7 @@ h3 {
 p,li {
   font-size: 1.4rem;
   padding-bottom: 1.5rem;
+  list-style: none;
 }
 
 body {
@@ -218,24 +219,23 @@ body.night-mode .nave a:hover {
 /* Main Container */
 .container {
   padding-left: 3rem;
-  margin: auto;
+  margin: 0 auto;
   text-align: justify;
   width: 100%;
   max-width: 100vw;
   padding: 1rem;
+  max-width: 1200px;
 }
-
 
 /* Main Content */
 .main-content {
-  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
 
 section {
   margin: 4rem 0;
-  margin-bottom: 20vh;
+  padding: 2rem 0; /* Ajusta esto según sea necesario */
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -243,11 +243,10 @@ section {
 
 
 #perfil {
-  height: 70vh;
   background-attachment: fixed;
   display: flex;
   gap: 3rem;
-  
+  margin-bottom: 4rem; /* Agrega espacio debajo de la sección de perfil */
 }
 
 .picture {
@@ -260,6 +259,7 @@ section {
   display: flex;
   flex-direction: column;
   text-align: start;
+  margin-top: 4rem; /* Espacio adicional encima de la sección de educación */
 }
 
 .academy {
@@ -318,12 +318,10 @@ section {
 }
 
 .info {
-  height: 30vh;
-  margin: 4rem;
+  padding: 1rem;
   display: flex;
   flex-flow: wrap;
   justify-content: center;
-  border-radius: 2rem;
   gap: 3rem;
 }
 
@@ -368,7 +366,6 @@ section {
     background-image: url('../img/solspace.jpg'); /* Your background image */
   }
   
-  
   .nav {
     display: flex;
     flex-direction: column;
@@ -411,6 +408,14 @@ section {
   .certs {
     flex-direction: column;
     align-items: center;
+  }
+
+ .info i {
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  padding-bottom: 6rem;
   }
   
 }
