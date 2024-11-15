@@ -30,15 +30,8 @@
   --tc2: #df8d00;
 }
 
-
-
 a {
   font-size: 1rem;
-}
-
-img {
-  width: 100%;
-  height: auto;
 }
 
 
@@ -337,14 +330,23 @@ section {
 
 .pro {
   display: flex;
-  gap: 3rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin: 0 auto;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
+}
+
+.pro img:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
 }
 
 .pro img {
-  width: 10rem;
+  transition: transform 0.1s ease-in-out;
+  width: 20rem;
+  height: 15rem;
+  object-fit: cover;
   border-radius: 2rem;
 }
 
